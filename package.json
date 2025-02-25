@@ -1,11 +1,11 @@
 {
   "name": "@wendraw/three-bvh-csg",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "A fast, flexible, dynamic CSG implementation on top of three-mesh-bvh",
   "main": "build/index.umd.cjs",
-  "module": "src/index.js",
+  "module": "build/index.module.js",
   "type": "module",
-  "types": "src/index.d.ts",
+  "types": "build/index.module.js",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -20,7 +20,6 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "src/*",
     "build/*"
   ],
   "keywords": [
