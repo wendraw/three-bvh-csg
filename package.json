@@ -5,7 +5,7 @@
   "main": "build/index.umd.cjs",
   "module": "build/index.module.js",
   "type": "module",
-  "types": "build/index.module.js",
+  "types": "build/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
     "access": "public"
@@ -13,7 +13,8 @@
   "scripts": {
     "start": "cd examples && parcel serve ./*.html --dist-dir ./dev-bundle/ --no-cache --no-hmr",
     "build-examples": "cd examples && parcel build ./*.html --dist-dir ./bundle/ --public-url . --no-cache --no-content-hash",
-    "build": "rollup -c",
+    "build": "rollup -c && npm run clean-temp-dts",
+    "clean-temp-dts": "find build -name '*.d.ts' -not -path 'build/index.d.ts' -type f -delete && find build -type d -empty -delete",
     "lint": "eslint \"./src/**/*.{js,ts}\" \"./examples/*.js\" && tsc -p tsconfig.json --noEmit",
     "benchmark": "node ./benchmark/benchmark.js",
     "test": "cd tests && jest",
@@ -53,6 +54,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/eslint": "^7.28.1",
     "@types/jest": "^27.0.2",
     "@types/three": "^0.152.0",
@@ -66,6 +68,7 @@
     "jsonc-eslint-parser": "^2.4.0",
     "parcel": "^2.6.0",
     "rollup": "^2.70.0",
+    "rollup-plugin-dts": "^6.1.1",
     "three": "^0.155.0",
     "three-csg-ts": "^3.1.10",
     "three-mesh-bvh": "^0.6.6",

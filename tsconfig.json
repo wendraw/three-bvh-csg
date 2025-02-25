@@ -1,17 +1,23 @@
 {
 	"compilerOptions": {
 		"target": "es2016",
-		"module": "commonjs",
+		"module": "esnext",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"allowJs": true,
+		"checkJs": false,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"declarationDir": "./build",
+		"outDir": "./build",
 
 		"strict": true,
 		"skipLibCheck": true,
 		"baseUrl": ".",
-		"noEmit": true,
 		"noUnusedParameters": true,
 		"strictNullChecks": true
 	},
-	"include": ["src"],
+	"include": ["src/**/*.js", "src/**/*.ts"],
 	"exclude": ["node_modules"]
 }
