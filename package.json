@@ -7,6 +7,9 @@
   "type": "module",
   "types": "src/index.d.ts",
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "cd examples && parcel serve ./*.html --dist-dir ./dev-bundle/ --no-cache --no-hmr",
     "build-examples": "cd examples && parcel build ./*.html --dist-dir ./bundle/ --public-url . --no-cache --no-content-hash",
