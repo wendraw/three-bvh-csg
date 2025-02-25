@@ -1,6 +1,6 @@
 {
-  "name": "three-bvh-csg",
-  "version": "0.0.16",
+  "name": "@wendraw/three-bvh-csg",
+  "version": "0.0.17",
   "description": "A fast, flexible, dynamic CSG implementation on top of three-mesh-bvh",
   "main": "build/index.umd.cjs",
   "module": "src/index.js",
@@ -61,6 +61,7 @@
     "eslint-config-mdcs": "^5.0.0",
     "eslint-plugin-jest": "^23.20.0",
     "jest": "^27.2.4",
+    "jsonc-eslint-parser": "^2.4.0",
     "parcel": "^2.6.0",
     "rollup": "^2.70.0",
     "three": "^0.155.0",

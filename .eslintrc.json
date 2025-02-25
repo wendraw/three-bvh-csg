@@ -23,6 +23,10 @@
 				"no-unused-vars": ["error", { "args": "none" }],
 				"indent": [2, 2]
 			}
+		},
+		{
+			"files": ["*.json"],
+			"parser": "jsonc-eslint-parser"
 		}
 	]
 }
